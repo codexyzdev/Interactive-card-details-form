@@ -1,0 +1,10 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CardContainer from "../components/CardContainer.jsx";
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="mx-auto max-w-[375px]">
+    <CardContainer client:load />
+  </main>
+</Layout>
