@@ -51,4 +51,16 @@ const { title } = Astro.props;
   input:invalid {
     border: 1px solid rebeccapurple !important;
   }
+
+  body {
+    background-image: url("/images/bg-main-mobile.png");
+    background-repeat: repeat-x;
+  }
+  @media screen and (min-width: 1024px) {
+    body {
+      background-repeat: no-repeat;
+      background-size: 500px;
+      background-image: url("/images/bg-main-desktop.png");
+    }
+  }
 </style>
