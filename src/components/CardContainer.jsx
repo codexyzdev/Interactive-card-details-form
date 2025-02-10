@@ -47,7 +47,7 @@ export default function CardContainer() {
         </motion.div>
       ) : (
         <form
-          className="relative mt-20 px-7 lg:ml-auto lg:mt-10 lg:w-96 lg:px-0"
+          className="mt-20 px-7 lg:ml-auto lg:mt-10  mx-auto lg:w-96 lg:px-0"
           onSubmit={handleSubmit((data) => {
             setDone(true);
           })}
