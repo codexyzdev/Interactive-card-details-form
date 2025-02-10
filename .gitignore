@@ -2,11 +2,9 @@
 
 # generated types
 .astro/
-
 # dependencies
 node_modules/
 
-prueba
 
 # logs
 npm-debug.log*
