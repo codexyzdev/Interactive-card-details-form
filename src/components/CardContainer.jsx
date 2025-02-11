@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { motion } from "motion/react";
 import Cards from "./Cards";
+
 export default function CardContainer() {
   const [done, setDone] = useState(false);
   const {
@@ -20,7 +21,7 @@ export default function CardContainer() {
   });
 
   return (
-    <div className="grid-cols-2 lg:grid lg:min-h-screen lg:place-content-center">
+    <main className="grid grid-cols-1 px-7 lg:px-0 lg:max-w-4xl lg:mx-auto  lg:gap-20 lg:grid lg:min-h-screen lg:grid-cols-2 lg:place-content-center">
       <Cards watch={watch} />
 
       {done ? (
@@ -28,7 +29,7 @@ export default function CardContainer() {
           initial={{ scale: 0, x: -20 }}
           animate={{ scale: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="mt-20 flex flex-col items-center bg-white px-7 lg:ml-auto lg:mt-10 lg:w-96 lg:px-0"
+          className="mt-20 flex flex-col items-center "
         >
           <img
             src="/images/icon-complete.svg"
@@ -47,7 +48,7 @@ export default function CardContainer() {
         </motion.div>
       ) : (
         <form
-          className="mt-20 px-7 lg:ml-auto lg:mt-10  mx-auto lg:w-96 lg:px-0"
+          className="lg:mt-20 w-full "
           onSubmit={handleSubmit((data) => {
             setDone(true);
           })}
@@ -191,6 +192,6 @@ export default function CardContainer() {
           </button>
         </form>
       )}
-    </div>
+    </main>
   );
 }
